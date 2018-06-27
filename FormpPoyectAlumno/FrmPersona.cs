@@ -23,7 +23,7 @@ namespace FormpPoyectAlumno
             
         }
 
-        private void btnSave_Click_1(object sender, EventArgs e)
+        public void btnSave_Click_1(object sender, EventArgs e)
         {
             Persona person = new Persona
             {
@@ -32,36 +32,21 @@ namespace FormpPoyectAlumno
                 StrSurname = txtSurname.Text,
                 strDNI = txtDNI.Text
             };
-
+            
             txtId.Clear();
             txtName.Clear();
             txtSurname.Clear();
             txtDNI.Clear();
-            CreateJsonPersona(person);
+            var addpersona = new PersonaFileManager();
+            addpersona.Add(person);
+
+
+
         }
-        public void CreateJsonPersona(Persona Objperson)
+
+        private void FrmDatos_Load(object sender, EventArgs e)
         {
-            string strJsonPerona = JsonConvert.SerializeObject(Objperson);
-            string strJsonPath = @"C:\Users\DSANCHEZ\source\repos\FormpPoyectAlumno\JsonFile\Persona.json";
-            generateJson(strJsonPerona, strJsonPath);
-        }
-        private void generateJson( string strfile,string strPath)
-        {
-            if (File.Exists(strPath))
-            {
-                using (TextWriter JsonFile = new StreamWriter(strPath))
-                {
-                    JsonFile.WriteLine(strfile);
-                }
-            }
-            else
-            {
-                File.Create(strPath).Dispose();
-                using (TextWriter JsonFile = new StreamWriter(strPath))
-                {
-                    JsonFile.WriteLine(strfile);
-                }
-            }
+
         }
     }
 }

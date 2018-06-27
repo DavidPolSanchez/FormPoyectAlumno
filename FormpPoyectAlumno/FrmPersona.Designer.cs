@@ -43,7 +43,7 @@
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(124, 179);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(95, 30);
             this.btnSave.TabIndex = 0;
@@ -94,7 +94,7 @@
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(111, 27);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(109, 20);
             this.txtId.TabIndex = 5;
@@ -102,7 +102,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(111, 62);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(109, 20);
             this.txtName.TabIndex = 6;
@@ -110,7 +110,7 @@
             // txtSurname
             // 
             this.txtSurname.Location = new System.Drawing.Point(111, 98);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(2);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(109, 20);
             this.txtSurname.TabIndex = 7;
@@ -118,14 +118,10 @@
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(111, 140);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(2);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(109, 20);
             this.txtDNI.TabIndex = 8;
-            // 
-            // backgroundWorker1
-            // 
-            
             // 
             // FrmDatos
             // 
@@ -141,9 +137,10 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblsurname);
             this.Controls.Add(this.lblId);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmDatos";
             this.Text = "Registro de Datos ";
+            this.Load += new System.EventHandler(this.FrmDatos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
